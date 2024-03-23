@@ -1,0 +1,7 @@
+D:\visual studio\C#\Affine cipher\Affine cipher\bin\Debug\Affine cipher.exe.config
+D:\visual studio\C#\Affine cipher\Affine cipher\bin\Debug\Affine cipher.exe
+D:\visual studio\C#\Affine cipher\Affine cipher\bin\Debug\Affine cipher.pdb
+D:\visual studio\C#\Affine cipher\Affine cipher\obj\Debug\Affine cipher.csproj.AssemblyReference.cache
+D:\visual studio\C#\Affine cipher\Affine cipher\obj\Debug\Affine cipher.csproj.CoreCompileInputs.cache
+D:\visual studio\C#\Affine cipher\Affine cipher\obj\Debug\Affine cipher.exe
+D:\visual studio\C#\Affine cipher\Affine cipher\obj\Debug\Affine cipher.pdb
