@@ -1,0 +1,7 @@
+D:\visual studio\C#\Calculator\EncrHill\bin\Debug\EncrHill.exe.config
+D:\visual studio\C#\Calculator\EncrHill\bin\Debug\EncrHill.exe
+D:\visual studio\C#\Calculator\EncrHill\bin\Debug\EncrHill.pdb
+D:\visual studio\C#\Calculator\EncrHill\obj\Debug\EncrHill.csproj.AssemblyReference.cache
+D:\visual studio\C#\Calculator\EncrHill\obj\Debug\EncrHill.csproj.CoreCompileInputs.cache
+D:\visual studio\C#\Calculator\EncrHill\obj\Debug\EncrHill.exe
+D:\visual studio\C#\Calculator\EncrHill\obj\Debug\EncrHill.pdb
