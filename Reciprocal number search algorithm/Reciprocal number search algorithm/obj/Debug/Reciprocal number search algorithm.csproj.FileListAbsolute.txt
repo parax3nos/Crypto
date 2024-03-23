@@ -1,0 +1,7 @@
+D:\visual studio\C#\Reciprocal number search algorithm\Reciprocal number search algorithm\bin\Debug\Reciprocal number search algorithm.exe.config
+D:\visual studio\C#\Reciprocal number search algorithm\Reciprocal number search algorithm\bin\Debug\Reciprocal number search algorithm.exe
+D:\visual studio\C#\Reciprocal number search algorithm\Reciprocal number search algorithm\bin\Debug\Reciprocal number search algorithm.pdb
+D:\visual studio\C#\Reciprocal number search algorithm\Reciprocal number search algorithm\obj\Debug\Reciprocal number search algorithm.csproj.AssemblyReference.cache
+D:\visual studio\C#\Reciprocal number search algorithm\Reciprocal number search algorithm\obj\Debug\Reciprocal number search algorithm.csproj.CoreCompileInputs.cache
+D:\visual studio\C#\Reciprocal number search algorithm\Reciprocal number search algorithm\obj\Debug\Reciprocal number search algorithm.exe
+D:\visual studio\C#\Reciprocal number search algorithm\Reciprocal number search algorithm\obj\Debug\Reciprocal number search algorithm.pdb
