@@ -1,6 +1,8 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,35 +10,49 @@ namespace Affine_cipher
 {
     internal class Program
     {
-        public static void Encription(int c, int a, int b, int n, int[] Letters)
+        public static string Encription(int c, int a, int b, int n, string word)
         {
-            Console.WriteLine("Fucntion of encription:");
-            int[] Encr = new int[c];
-            for (int i = 0; i < Letters.Length; i++)
-            {
-                Encr[i] = (a * Letters[i] + b) % n;
-                if (Encr[i] < 0)
-                {
-                    Encr[i] %= n;
-                    Encr[i] = n + Encr[i];
-                }
-                else Encr[i] %= n;
-            }
-            for (int i = 0; i < Encr.Length; i++)
-            {
-                Console.WriteLine($"Для элемента {Letters[i]} - {Encr[i]}");
-            }
-        }
-        public static void Description(int c, int a, int b, int n, int[] Letters)
-        {
-            Console.WriteLine("Fucntion of encription:");
-            int[] Descr = new int[c];
 
+            char[] alph = "абвгдежзийклмнопрстуфхцчшщъыьэюя".ToCharArray();
+
+            string newword = "";
+
+            int count;
+
+            for (int i = 0; i < word.Length; i++)
+            {
+                count = 0;
+                for (int j = 0; j < alph.Length; j++)
+                {
+                    if (word[i] == alph[j])
+                    {
+                        int num = (a*j+b) % n;
+                        if (num < 0)
+                        {
+                            num %= n;
+                            num = n + num;
+                        }
+                        else num %= n;
+                        newword += alph[num];
+                        count++;
+                        break;
+                    }
+                }
+                if (count == 0) newword += word[i];
+            }
+
+            return newword;
+
+        }
+        public static string Description(int c, int a, int b, int n, string word)
+        {
+            char[] alph = "абвгдежзийклмнопрстуфхцчшщъыьэюя".ToCharArray();
+
+            string newword = "";
             //Reciprocal number search algorithm
-            int x;
+            int x;//
             int[,] M = new int[2, 8] { {0,0,0,0,n,a,0,1},
                                        {0,0,1,0,0,0,0,0}};
-            Console.WriteLine("Матрица поиска:");
             while (M[1, 2] != 0)
             {
                 M[1, 0]++;
@@ -62,37 +78,38 @@ namespace Affine_cipher
                 x %= n;
                 x = n + x;
             }
-            else x %= n;
+            else x %= n;//end RNSA
 
-            for (int i = 0; i < Letters.Length; i++)
+            int count;
+
+            for (int i = 0; i < word.Length; i++)
             {
-                Descr[i] = ((Letters[i] - b)*x)%n;
-                if (Descr[i] < 0)
+                count = 0;
+                for (int j = 0; j < alph.Length; j++)
                 {
-                    Descr[i] %= n;
-                    Descr[i] = n + Descr[i];
+                    if (word[i] == alph[j])
+                    {
+                        int num = ((j - b) * x) % n;
+                        if (num < 0)
+                        {
+                            num %= n;
+                            num = n + num;
+                        }
+                        else num %= n;
+                        newword += alph[num];
+                        count++;
+                        break;
+                    }
                 }
-                else Descr[i] %= n;
+                if (count == 0) newword += word[i];
             }
-            Console.WriteLine($"\nopposite a - {x}\n");
-            for (int i = 0; i < Descr.Length; i++)
-            {
-                Console.WriteLine($"Для элемента {Letters[i]} - {Descr[i]}");
-            }
+
+            return newword;
         }
 
         static void Main(string[] args)
         {
             int n, a, b;
-            Console.Write("Введите количество символов: ");
-            int c = Convert.ToInt32(Console.ReadLine());
-            int[] Letters = new int[c];
-            for (int i = 0; i < Letters.Length; i++) 
-            {
-                Console.Write($"Введите символ для {i} элемента: ");
-                Letters[i] = Convert.ToInt32(Console.ReadLine());
-            }
-            Console.WriteLine();
             Console.Write("Введите мощность алфавита: ");
             n = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
@@ -102,22 +119,29 @@ namespace Affine_cipher
             Console.Write("Введите ключ b: ");
             b = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
-            choosingFunc:
-            Console.WriteLine("Choose function: 1 - Encription | 2 - Description");
-            int choose = Convert.ToInt32(Console.ReadLine());
-            if (choose == 1) 
-            {
-                Console.WriteLine();
-                Encription(c, a, b, n, Letters);
-            }
-            if (choose == 2)
-            {
-                Console.WriteLine();
-                Description(c, a, b, n, Letters);
-            }
+        choosingFunc:
+            //Console.Write("Введите слово: ");
+
+            string firstPath = @"C:\Users\Evgeny\Downloads\3 юмор.txt";
+            string lastPath = @"C:\Users\Evgeny\Desktop\desc.txt";
+
+            string word = File.ReadAllText(firstPath, Encoding.UTF8);
+
+            Console.WriteLine(word);
 
             Console.WriteLine();
-            Console.WriteLine("Перейти к выбору функций - 1 | Перейти к следующей задаче - 2");
+            Console.WriteLine("\nВыберите функцию: 1 - Зашифровать | 2 - Расшифровать");
+            int choose = Convert.ToInt32(Console.ReadLine());
+
+            if (choose == 1) Console.WriteLine(Encription(word.Length, a, b, n, word));
+
+            if (choose == 2)
+            {
+                //File.WriteAllText(lastPath, Description(word.Length, a, b, n, word),Encoding.UTF8);
+                Console.WriteLine(Description(word.Length, a, b, n, word));
+            }
+
+            Console.WriteLine("\n\nДругой текст - 1 | Следущая задача - 2");
             choose = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
             if ( choose == 1)
