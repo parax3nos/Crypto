@@ -1,0 +1,7 @@
+D:\visual studio\C#\test3\test3\bin\Debug\test3.exe.config
+D:\visual studio\C#\test3\test3\bin\Debug\test3.exe
+D:\visual studio\C#\test3\test3\bin\Debug\test3.pdb
+D:\visual studio\C#\test3\test3\obj\Debug\test3.csproj.AssemblyReference.cache
+D:\visual studio\C#\test3\test3\obj\Debug\test3.csproj.CoreCompileInputs.cache
+D:\visual studio\C#\test3\test3\obj\Debug\test3.exe
+D:\visual studio\C#\test3\test3\obj\Debug\test3.pdb

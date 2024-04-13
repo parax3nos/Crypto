@@ -1,0 +1,9 @@
+public static int reciprocalNumber (int el, int module)
+{
+    for (int i = 1; i < module; i++) 
+    {
+        if ((el % module) * (i % module) % module == 1)
+            return i;
+    }
+    return -1;
+}

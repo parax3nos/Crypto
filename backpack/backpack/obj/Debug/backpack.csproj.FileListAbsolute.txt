@@ -1,0 +1,7 @@
+D:\visual studio\C#\backpack\backpack\bin\Debug\backpack.exe.config
+D:\visual studio\C#\backpack\backpack\bin\Debug\backpack.exe
+D:\visual studio\C#\backpack\backpack\bin\Debug\backpack.pdb
+D:\visual studio\C#\backpack\backpack\obj\Debug\backpack.csproj.AssemblyReference.cache
+D:\visual studio\C#\backpack\backpack\obj\Debug\backpack.csproj.CoreCompileInputs.cache
+D:\visual studio\C#\backpack\backpack\obj\Debug\backpack.exe
+D:\visual studio\C#\backpack\backpack\obj\Debug\backpack.pdb

@@ -1,0 +1,7 @@
+D:\visual studio\C#\algorithmPallada\algorithmPallada\bin\Debug\algorithmPallada.exe.config
+D:\visual studio\C#\algorithmPallada\algorithmPallada\bin\Debug\algorithmPallada.exe
+D:\visual studio\C#\algorithmPallada\algorithmPallada\bin\Debug\algorithmPallada.pdb
+D:\visual studio\C#\algorithmPallada\algorithmPallada\obj\Debug\algorithmPallada.csproj.AssemblyReference.cache
+D:\visual studio\C#\algorithmPallada\algorithmPallada\obj\Debug\algorithmPallada.csproj.CoreCompileInputs.cache
+D:\visual studio\C#\algorithmPallada\algorithmPallada\obj\Debug\algorithmPallada.exe
+D:\visual studio\C#\algorithmPallada\algorithmPallada\obj\Debug\algorithmPallada.pdb

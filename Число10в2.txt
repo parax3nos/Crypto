@@ -1,0 +1,33 @@
+public static string toBinary(int number)
+{
+    string stBs = "";
+    int ostatok;
+    while (number > 1)
+    {
+        ostatok = number % 2;
+        number  = number / 2;
+        stBs += Convert.ToString(ostatok);
+    }
+    stBs += Convert.ToString(number);
+    
+    return stBs; // mirror;
+    string stBf = ""; //really
+    for (int i = stBs.Length-1; i >= 0; i--)
+    {
+        stBf += stBs[i];
+    }
+    return stBf;
+        
+public static ulong stringToInt(ulong s, int i, int length)
+{
+    double delitel = Math.Pow(10,length-1-i);
+    ulong n = s / Convert.ToUInt64(delitel);
+    if (i != 0) return n%10;
+    else return n;
+}
+
+//Первая функция переводит инт10 в стринг2 - выводит зеркальное 
+либо нормальное значени
+//Вторая: s = int.Parse(стринг2), функция работает в for(i,i,i), 
+стринг2.Length, строится массив в который ф-я возвращает
+нужной ячейке нужную цифру(1/0)

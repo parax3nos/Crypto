@@ -1,0 +1,44 @@
+public static int vStepen(int stepen, int el, int module)
+{
+    string stB = toBinary(stepen);
+    int[] k = new int[stB.Length];
+    int[] A = new int[stB.Length];
+    int[] b = new int[stB.Length];
+    ulong s = ulong.Parse(stB);
+    for (int i = 0; i < stB.Length; i++)
+    {
+        k[i] = Convert.ToInt32(stringToInt(s, i, stB.Length));
+    }
+
+    A[0] = el;
+
+    if (k[0] == 0) b[0] = 1;
+    else b[0] = A[0];
+
+    for (int i = 1; i < stB.Length; i++)
+    {
+        A[i] = (A[i - 1] * A[i-1])%module;
+        if (k[i] == 0) b[i] = b[i - 1];
+        else b[i] = (b[i - 1] * A[i]) % module;
+    }
+
+    //output
+    //for (int i = 0; i < stB.Length; i++)
+    //{
+    //    Console.Write(k[i] + "\t");
+    //}
+    //Console.WriteLine();
+    //for (int i = 0; i < stB.Length; i++)
+    //{
+    //    Console.Write(A[i] + "\t");
+    //}
+    //Console.WriteLine();
+    //for (int i = 0; i < stB.Length; i++)
+    //{
+    //    Console.Write(b[i] + "\t");
+    //}
+    //Console.WriteLine(  );
+    return b[stB.Length - 1];
+}
+
+//нужная степень, элемент, модуль - строится по таблице

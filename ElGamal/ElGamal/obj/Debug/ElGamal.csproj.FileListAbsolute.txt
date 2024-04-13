@@ -1,0 +1,7 @@
+D:\visual studio\C#\ElGamal\ElGamal\bin\Debug\ElGamal.exe.config
+D:\visual studio\C#\ElGamal\ElGamal\bin\Debug\ElGamal.exe
+D:\visual studio\C#\ElGamal\ElGamal\bin\Debug\ElGamal.pdb
+D:\visual studio\C#\ElGamal\ElGamal\obj\Debug\ElGamal.csproj.AssemblyReference.cache
+D:\visual studio\C#\ElGamal\ElGamal\obj\Debug\ElGamal.csproj.CoreCompileInputs.cache
+D:\visual studio\C#\ElGamal\ElGamal\obj\Debug\ElGamal.exe
+D:\visual studio\C#\ElGamal\ElGamal\obj\Debug\ElGamal.pdb
