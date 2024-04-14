@@ -1,0 +1,7 @@
+D:\visual studio\C#\DES\DES\bin\Debug\DES.exe.config
+D:\visual studio\C#\DES\DES\bin\Debug\DES.exe
+D:\visual studio\C#\DES\DES\bin\Debug\DES.pdb
+D:\visual studio\C#\DES\DES\obj\Debug\DES.csproj.AssemblyReference.cache
+D:\visual studio\C#\DES\DES\obj\Debug\DES.csproj.CoreCompileInputs.cache
+D:\visual studio\C#\DES\DES\obj\Debug\DES.exe
+D:\visual studio\C#\DES\DES\obj\Debug\DES.pdb
