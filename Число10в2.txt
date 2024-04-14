@@ -17,6 +17,7 @@ public static string toBinary(int number)
         stBf += stBs[i];
     }
     return stBf;
+}
         
 public static ulong stringToInt(ulong s, int i, int length)
 {
@@ -31,3 +32,35 @@ public static ulong stringToInt(ulong s, int i, int length)
 //Вторая: s = int.Parse(стринг2), функция работает в for(i,i,i), 
 стринг2.Length, строится массив в который ф-я возвращает
 нужной ячейке нужную цифру(1/0)
+
+public static int[] charToInt(char[] numeric)
+{
+    int[] A = new int[numeric.Length];
+    int n;
+    for (int i = 0; i < numeric.Length; i++)
+    {
+        string ht = Convert.ToString(numeric[i]);
+        n = Convert.ToInt32(ht);
+        A[i] = n;
+    }
+    return A;
+}
+
+//Вторая реализация стрингТуИнт только теперь на вход 
+строка.ToCharArray(), которая переводит каждую свою 
+ячейку в ячейку инт массива
+
+public static int[] tenTo2(int N)
+{
+    int ostatok;
+    int[] A = new int[4];
+    for (int i = 3; i >= 0; i--)
+    {
+        ostatok = N % 2;
+        N = N / 2;
+        A[i] = ostatok;
+    }
+    return A;
+}
+
+//Третья реализация, в которой возвращается массив в СС2 нормальный, а на вход число в СС10
